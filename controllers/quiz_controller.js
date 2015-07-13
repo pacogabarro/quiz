@@ -14,6 +14,7 @@ exports.load = function(req, res, next, quizId) {
 
 //GET /quizes
 exports.index = function(req, res) {
+  // La primera vez que se ejecuta GET /quizes el valor de search es undefined
   if (req.query.search === undefined){
       req.query.search="";
   };
